@@ -58,4 +58,7 @@ Route::prefix('checkout')->group(function () {
     Route::get('/result', [Front\CheckOutController::class, 'result']);
 
 });
+Route::prefix('account')->group(function () {
+    Route::get('login', [\App\Http\Controllers\Front\AccountController::class, 'login']);
+});
 
